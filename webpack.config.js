@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+const webpack = require('webpack')
+const path = require('path')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
@@ -76,25 +76,4 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true
     })
   ])
-}
-const webpack = require('webpack')
-const path = require('path')
-
-module.exports = {
-    entry: './app.js',
-    output: {
-        filename: 'bundle.js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                include: [ // use `include` vs `exclude` to white-list vs black-list
-                    path.resolve(__dirname, "src"), // white-list your app source files
-                    require.resolve("bootstrap-vue"), // white-list bootstrap-vue
-                ],
-                loader: "babel-loader"
-            }
-        ]
-    }
 }
