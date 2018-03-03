@@ -1,17 +1,21 @@
 <template>
 <div>
-<p><ul><b-button variant="primary">
-  Додати файл
-</b-button></ul></p>
-</p>
+<link rel="stylesheet" href="style.css">
+
+<form enctype="multipart/form-data" method="post">
+   <p><input type="file" name="f">
+   <input type="submit" value="Отправить"></p>
+   </form>
+
 
 <br>
 
-    <p>Пожалуйста, подождите, пока загрузится розклад руху тролейбусів.</p>
-    <progress id="progress" value="0" max="300">
-        Загружено <span id="percent">0</span>%
-    </progress>
-    <p id="done"></p>
+
+
+
+
+
+
 
 
 
@@ -19,6 +23,12 @@
 Розклад руху тролейбусів.xlsx<b-button onclick="changeProgress()" variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
 <br>
  <br>
+ <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+     <progress id="progress" value="100" max="300">
+         Загружено <span id="percent">0</span>%
+     </progress>
+     <br>
+     <br>
  <b-tabs>
    <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
      <br>
@@ -36,28 +46,6 @@
   </div>
 </template>
 
-<script>
-var progress = document.getElementById('progress'),
-    percent = document.getElementById('percent'),
-    done = document.getElementById('done');
-// Old browser support
-if ( ! progress.value)
-    progress.value = +progress.getAttribute("value");
-if ( ! progress.max)
-    progress.max = +progress.getAttribute("max");
-
-function changeProgress() {
-    if (progress.value >= progress.max) {
-        done.innerHTML = "Готово!";
-        return;
-    }
-    progress.value++;
-    percent.innerHTML = Math.floor(progress.value / progress.max * 100);
-    setTimeout(changeProgress, 10);
-}
-changeProgress();
-
-</script>
 
 <script>
 export default {
