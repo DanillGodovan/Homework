@@ -1,7 +1,8 @@
+<!-- TODO rename this component from Example.vue to TroleybusSchedule.vue -->
 <template>
 <div>
 <link rel="stylesheet" href="style.css">
-
+<!-- TODO we don't need this form for now -->
 <form enctype="multipart/form-data" method="post">
    <p><input type="file" name="f">
    <input type="submit" value="Отправить"></p>
@@ -19,10 +20,11 @@
 
 
 
-
+<!-- TODO remove onclick. We don't need this. -->
 Розклад руху тролейбусів.xlsx<b-button onclick="changeProgress()" variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
 <br>
  <br>
+ <!-- TODO this message is not necessary. Progress will show that file is under importing and result message will show if import success or failed.-->
  <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
      <progress id="progress" value="100" max="300">
          Загружено <span id="percent">0</span>%
@@ -55,6 +57,7 @@ export default {
       max: 100
     }
   },
+  // TODO: does it work?
   methods: {
     clicked () {
       this.counter = Math.random() * this.max
