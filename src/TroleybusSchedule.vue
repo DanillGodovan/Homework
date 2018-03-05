@@ -7,28 +7,16 @@
    <input type="submit" value="Отправить"></p>
    </form>
 
-
 <br>
-
-
-
-
-
-
-
-
-
-
-
 Розклад руху тролейбусів.xlsx<b-button onclick="changeProgress()" variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
-<br>
- <br>
+<br><br>
+
  <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
      <progress id="progress" value="100" max="300">
          Загружено <span id="percent">0</span>%
      </progress>
-     <br>
-     <br>
+<br><br>
+
  <b-tabs>
    <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
      <br>
@@ -37,11 +25,9 @@
      <br><a href="#"></a>
    </b-tab>
    </b-tabs>
+
  <b-table striped hover :items="items">
 </b-table>
-
-
-
 
   </div>
 </template>
@@ -64,7 +50,6 @@ export default {
   }
 }
 </script>
-
 
 <script>
 export default {
@@ -99,5 +84,4 @@ export default {
     }
   }
   }
-
 </script>
