@@ -8,7 +8,7 @@
    </form>
 
 <br>
-Розклад руху тролейбусів.xlsx<b-button onclick="changeProgress()" variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
+Розклад руху тролейбусів.xlsx<b-button variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
 <br><br>
 
  <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
