@@ -1,35 +1,23 @@
 <template>
-<div>
-<link rel="stylesheet" href="style.css">
-<!-- TODO we don't need this form for now -->
-<form enctype="multipart/form-data" method="post">
-   <p><input type="file" name="f">
-   <input type="submit" value="Отправить"></p>
-   </form>
+    <div>
+        Розклад руху тролейбусів.xlsx
+        <b-button variant="success">Імпортувати</b-button>
+        <b-button variant="danger">Видалити файл</b-button>
 
-<br>
-Розклад руху тролейбусів.xlsx<b-button variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
-<br><br>
+        <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+        <progress id="progress" value="100" max="300">
+            Загружено <span id="percent">0</span>%
+        </progress>
 
- <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-     <progress id="progress" value="100" max="300">
-         Загружено <span id="percent">0</span>%
-     </progress>
-<br><br>
+        <b-tabs>
+            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active></b-tab>
+            <b-tab title="1A:вул Пацаєва-Санаторій Украіна">
+                <a href="#"></a>
+            </b-tab>
+        </b-tabs>
 
- <b-tabs>
-   <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
-     <br>
-   </b-tab>
-   <b-tab title="1A:вул Пацаєва-Санаторій Украіна" >
-     <br><a href="#"></a>
-   </b-tab>
-   </b-tabs>
-
- <b-table striped hover :items="items">
-</b-table>
-
-  </div>
+        <b-table striped hover :items="items"></b-table>
+    </div>
 </template>
 
 
