@@ -1,35 +1,23 @@
 <template>
-<div>
-<link rel="stylesheet" href="style.css">
+    <div>
+        Розклад руху тролейбусів.xlsx
+        <b-button variant="success">Імпортувати</b-button>
+        <b-button variant="danger">Видалити файл</b-button>
 
-<form enctype="multipart/form-data" method="post">
-   <p><input type="file" name="f">
-   <input type="submit" value="Отправить"></p>
-   </form>
+        <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+        <progress id="progress" value="100" max="300">
+            Загружено <span id="percent">0</span>%
+        </progress>
 
-<br>
-Розклад руху тролейбусів.xlsx<b-button variant="success">Імпортувати</b-button><b-button variant="danger">Видалити файл</b-button>
-<br><br>
+        <b-tabs>
+            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active></b-tab>
+            <b-tab title="1A:вул Пацаєва-Санаторій Украіна">
+                <a href="#"></a>
+            </b-tab>
+        </b-tabs>
 
- <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-     <progress id="progress" value="100" max="300">
-         Загружено <span id="percent">0</span>%
-     </progress>
-<br><br>
-
- <b-tabs>
-   <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
-     <br>
-   </b-tab>
-   <b-tab title="1A:вул Пацаєва-Санаторій Украіна" >
-     <br><a href="#"></a>
-   </b-tab>
-   </b-tabs>
-
- <b-table striped hover :items="items">
-</b-table>
-
-  </div>
+        <b-table striped hover :items="items"></b-table>
+    </div>
 </template>
 
 
@@ -41,6 +29,7 @@ export default {
       max: 100
     }
   },
+  // TODO: does it work?
   methods: {
     clicked () {
       this.counter = Math.random() * this.max
