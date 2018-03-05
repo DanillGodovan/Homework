@@ -17,7 +17,6 @@ import { Scrollspy } from 'bootstrap-vue/es/directives';
 Vue.use(Scrollspy);
 
 import { Progress } from 'bootstrap-vue/es/components';
-
 Vue.use(Progress);
 
 Vue.component ('app-example', Example)
