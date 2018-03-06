@@ -1,6 +1,6 @@
 <template>
 <div>
-<link rel="stylesheet" href="style.css">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
 <form enctype="multipart/form-data" method="post">
    <p><input type="file" name="f">
