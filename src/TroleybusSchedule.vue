@@ -9,9 +9,8 @@
         <b-button variant="danger">Видалити файл</b-button>
 
 
-        <p><i class="fas fa-spinner fa-pulse fa-2x"></i>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-        <progress id="progress" value="100" max="300">
-            Загружено <span id="percent">0</span>%
+        <p></i>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+          <i class="fas fa-spinner fa-pulse fa-2x"><progress id="progress" value="100" max="300">
         </progress>
 
         <b-tabs>
