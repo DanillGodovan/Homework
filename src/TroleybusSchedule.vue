@@ -1,15 +1,15 @@
 <template>
-<<<<<<< HEAD
 <div>
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-=======
-    <div>
-        Розклад руху тролейбусів.xlsx
+
+        <div class="file">
+           <i class="fab fa-xlsx-file"> Розклад руху тролейбусів.xlsx</i>
+        </div>
         <b-button variant="success">Імпортувати</b-button>
         <b-button variant="danger">Видалити файл</b-button>
->>>>>>> a781f239333c0ec54f48093d8a3d3291becb6959
 
-        <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+
+        <p><i class="fas fa-spinner fa-pulse fa-2x"></i>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
         <progress id="progress" value="100" max="300">
             Загружено <span id="percent">0</span>%
         </progress>
@@ -24,22 +24,17 @@
         <b-table striped hover :items="items"></b-table>
     </div>
 </template>
-
-
+<style>
+.file{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 30px;
+}
+</style>
 <script>
 export default {
   data () {
     return {
-      counter: 45,
-      max: 100
-    }
-  },
-  // TODO: does it work?
-  methods: {
-    clicked () {
-      this.counter = Math.random() * this.max
-      console.log('Change progress to ' +
-        Math.round(this.counter * 100) / 100)
     }
   }
 }
