@@ -3,15 +3,18 @@
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
         <div class="file">
+          <div style="color:Green">
            <i class="far fa-file fa-lg"> Розклад руху тролейбусів.xlsx</i>
+        </div>
         </div>
         <div class="buttons">
         <b-button variant="success">Імпортувати</b-button>
         <b-button variant="danger">Видалити файл</b-button>
         </div>
 
-        <p></i>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-          <i class="fas fa-spinner fa-pulse fa-2x"></i><progress id="progress" value="100" max="300">
+        <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+
+          <i class="fas fa-spinner fa-pulse fa-lg"></i><progress id="progress" value="100" max="300">
         </progress>
 
         <div class="tabs">
