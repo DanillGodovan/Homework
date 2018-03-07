@@ -3,16 +3,18 @@
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
         <div class="file">
-           <i class="fab fa-xlsx-file"> Розклад руху тролейбусів.xlsx</i>
+           <i class="far fa-file"> Розклад руху тролейбусів.xlsx</i>
         </div>
+        <div class="buttons">
         <b-button variant="success">Імпортувати</b-button>
         <b-button variant="danger">Видалити файл</b-button>
-
+        </div>
 
         <p></i>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-          <i class="fas fa-spinner fa-pulse fa-2x"><progress id="progress" value="100" max="300">
+          <i class="fas fa-spinner fa-pulse fa-2x"></i><progress id="progress" value="100" max="300">
         </progress>
 
+        <div class="tabs">
         <b-tabs>
             <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active></b-tab>
             <b-tab title="1A:вул Пацаєва-Санаторій Украіна">
@@ -21,6 +23,7 @@
         </b-tabs>
 
         <b-table striped hover :items="items"></b-table>
+        </div>
     </div>
 </template>
 <style>
@@ -28,6 +31,14 @@
   padding-top: 15px;
   padding-bottom: 15px;
   margin-left: 30px;
+}
+.tabs{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+}
+.buttons{
+  margin-left: 15px;
 }
 </style>
 <script>
