@@ -3,7 +3,7 @@
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
         <div class="file">
-          <div style="color:Green">
+          <div style="color:Cucumber">
            <i class="far fa-file fa-lg"> Розклад руху тролейбусів.xlsx</i>
         </div>
         </div>
