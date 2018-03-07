@@ -3,7 +3,7 @@
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
         <div class="file">
-           <i class="far fa-file"> Розклад руху тролейбусів.xlsx</i>
+           <i class="far fa-file fa-lg"> Розклад руху тролейбусів.xlsx</i>
         </div>
         <div class="buttons">
         <b-button variant="success">Імпортувати</b-button>
