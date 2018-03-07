@@ -19,13 +19,15 @@
 
         <div class="tabs">
         <b-tabs>
-            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active></b-tab>
+            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
+            <b-table striped hover :items="items"></b-table>
+            </b-tab>
             <b-tab title="1A:вул Пацаєва-Санаторій Украіна">
                 <a href="#"></a>
             </b-tab>
         </b-tabs>
 
-        <b-table striped hover :items="items"></b-table>
+
         </div>
     </div>
 </template>
