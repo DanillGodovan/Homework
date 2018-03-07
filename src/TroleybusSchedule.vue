@@ -10,8 +10,8 @@
         <b-button variant="danger">Видалити файл</b-button>
         </div>
 
-        <p></i>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-          <i class="fas fa-spinner fa-pulse fa-2x"></i><progress id="progress" value="100" max="300">
+        <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
+          <i class="fas fa-spinner fa-pulse fa-lg"></i><progress id="progress" value="100" max="300">
         </progress>
 
         <div class="tabs">
