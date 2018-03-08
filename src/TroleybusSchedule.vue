@@ -3,7 +3,7 @@
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
         <div class="file">
-          <div style="color:Green">
+          <div style="color:green">
            <i class="far fa-file fa-lg"> Розклад руху тролейбусів.xlsx</i>
         </div>
         </div>
@@ -19,13 +19,15 @@
 
         <div class="tabs">
         <b-tabs>
-            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active></b-tab>
+            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
+            <b-table striped hover :items="items"></b-table>
+            </b-tab>
             <b-tab title="1A:вул Пацаєва-Санаторій Украіна">
                 <a href="#"></a>
             </b-tab>
         </b-tabs>
 
-        <b-table striped hover :items="items"></b-table>
+
         </div>
     </div>
 </template>
