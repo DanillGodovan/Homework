@@ -1,40 +1,55 @@
 <template>
-    <div>
-        Розклад руху тролейбусів.xlsx
+<div>
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+        <div class="file">
+          <div style="color:green">
+           <i class="far fa-file fa-lg"> Розклад руху тролейбусів.xlsx</i>
+        </div>
+        </div>
+        <div class="buttons">
         <b-button variant="success">Імпортувати</b-button>
         <b-button variant="danger">Видалити файл</b-button>
+        </div>
 
         <p>Будь-ласка, почекайте, Рух тролейбусів завантаживається.</p>
-        <progress id="progress" value="100" max="300">
-            Загружено <span id="percent">0</span>%
+
+          <i class="fas fa-spinner fa-pulse fa-lg"></i><progress id="progress" value="100" max="300">
         </progress>
 
+        <div class="tabs">
         <b-tabs>
-            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active></b-tab>
+            <b-tab title="1:ЧЛФЗ:Аврора-Санаторій Украіна" active>
+            <b-table striped hover :items="items"></b-table>
+            </b-tab>
             <b-tab title="1A:вул Пацаєва-Санаторій Украіна">
                 <a href="#"></a>
             </b-tab>
         </b-tabs>
 
-        <b-table striped hover :items="items"></b-table>
+
+        </div>
     </div>
 </template>
-
-
+<style>
+.file{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 30px;
+}
+.tabs{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+}
+.buttons{
+  margin-left: 15px;
+}
+</style>
 <script>
 export default {
   data () {
     return {
-      counter: 45,
-      max: 100
-    }
-  },
-  // TODO: does it work?
-  methods: {
-    clicked () {
-      this.counter = Math.random() * this.max
-      console.log('Change progress to ' +
-        Math.round(this.counter * 100) / 100)
     }
   }
 }
